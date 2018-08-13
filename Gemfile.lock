@@ -1,0 +1,70 @@
+PATH
+  remote: .
+  specs:
+    graphql_authorize (0.1.0)
+      graphql (= 1.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    ast (2.4.0)
+    cancancan (2.2.0)
+    concurrent-ruby (1.0.5)
+    diff-lcs (1.3)
+    graphql (1.6.0)
+    i18n (1.1.0)
+      concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.1)
+    minitest (5.11.3)
+    parallel (1.12.1)
+    parser (2.5.1.2)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    rainbow (3.0.0)
+    rake (10.5.0)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
+    rubocop (0.58.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.10.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    unicode-display_width (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  bundler (~> 1.16)
+  cancancan (~> 2.0)
+  graphql_authorize!
+  rake (~> 10.0)
+  rspec
+  rubocop
+
+BUNDLED WITH
+   1.16.2
