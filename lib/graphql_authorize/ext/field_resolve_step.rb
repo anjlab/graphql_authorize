@@ -19,7 +19,7 @@ module GraphqlAuthorize
 
       if field_definition.authorize.is_a?(Proc)
         field_definition.authorize.call(object, args, context)
-      elsif field_definition.authorize.is_a?(Array)
+      elsif field_definition.authorize.is_a?(Array) && defined?(Ability)
         action, subject = field_definition.authorize
         Ability.new(context[:current_user]).can?(action, subject)
       else
