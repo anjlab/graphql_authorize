@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/anjlab/graphql_authorize.svg?branch=master)](https://travis-ci.org/anjlab/graphql_authorize)
+
 # GraphqlAuthorize
+
 
 This gem allows you to authorize an access to you graphql-fields (defined by [graphql-ruby](https://github.com/rmosolgo/graphql-ruby)). For now, we support only 1.6 version :(
 
