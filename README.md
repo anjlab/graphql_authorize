@@ -2,7 +2,7 @@
 
 This gem allows you to authorize an access to you graphql-fields (defined by [graphql-ruby](https://github.com/rmosolgo/graphql-ruby)).
 
-You can define an proc an pass it to `authorize` inside the field block:
+You can define a proc and pass it to `authorize` inside the field block:
 
 ```ruby
 field :posts, types[PostType] do
