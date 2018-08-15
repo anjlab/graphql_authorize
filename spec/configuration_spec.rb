@@ -13,14 +13,9 @@ describe GraphqlAuthorize::Configuration do
       expect(subject.auth_adapter).to be_nil
     end
 
-    it "acceptes can_can_can" do
-      subject.auth_adapter = GraphqlAuthorize::Configuration::CAN_CAN_CAN
-      expect(subject.auth_adapter).to eq(GraphqlAuthorize::Configuration::CAN_CAN_CAN)
-    end
-
-    it "raises an error when adapter is unknown" do
-      expect { subject.auth_adapter = :unknown }.to raise_exception(ArgumentError)
-      expect(subject.auth_adapter).to eq(nil)
+    it "accepts can_can_can" do
+      subject.auth_adapter = GraphqlAuthorize::AuthAdapters::CanCanCan
+      expect(subject.auth_adapter).to eq(GraphqlAuthorize::AuthAdapters::CanCanCan)
     end
   end
 end

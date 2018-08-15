@@ -8,8 +8,6 @@ require "spec_helper"
 describe "CanCanCan" do
   let(:query) { build_graphql_query("posts", selections: %i[id title]) }
 
-  before { GraphqlAuthorize.config.auth_adapter = nil }
-
   CanCanCanQueryType = GraphQL::ObjectType.define do
     name "CanCanCanQueryType"
 
@@ -45,7 +43,7 @@ describe "CanCanCan" do
     end
 
     it "returns error when user has no permission" do
-      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::Configuration::CAN_CAN_CAN
+      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::AuthAdapters::CanCanCan
 
       result_hash = CanCanCanSchema.execute(query, context: { current_user: guest })
 
@@ -54,7 +52,7 @@ describe "CanCanCan" do
     end
 
     it "returns date when user has permission" do
-      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::Configuration::CAN_CAN_CAN
+      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::AuthAdapters::CanCanCan
 
       result_hash = CanCanCanSchema.execute(query, context: { current_user: admin })
 
@@ -84,7 +82,7 @@ describe "CanCanCan" do
     let(:guest) { CustomUser.new(false) }
 
     before(:each) do
-      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::Configuration::CAN_CAN_CAN
+      GraphqlAuthorize.config.auth_adapter = GraphqlAuthorize::AuthAdapters::CanCanCan
       GraphqlAuthorize.config.auth_adapter_source = ->(context) { context[:current_user] }
     end
 

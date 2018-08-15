@@ -4,6 +4,9 @@ require "graphql"
 
 require "graphql_authorize/version"
 require "graphql_authorize/configuration"
+require "graphql_authorize/auth_adapters/base"
+require "graphql_authorize/auth_adapters/can_can_can"
+require "graphql_authorize/auth_adapters/pundit"
 require "graphql_authorize/ext/field"
 require "graphql_authorize/ext/field_resolve_step"
 

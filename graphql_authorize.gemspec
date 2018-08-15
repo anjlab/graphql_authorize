@@ -32,5 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rubocop"
   spec.add_development_dependency "cancancan", "~> 2.0"
+  spec.add_development_dependency "pundit"
   spec.add_development_dependency "activesupport"
 end

@@ -23,41 +23,13 @@ module GraphqlAuthorize
         return field_definition.authorize.call(object, args, context)
       end
 
-      if auth_adapter == GraphqlAuthorize::Configuration::CAN_CAN_CAN
-        return authorize_with_can_can_can(field_definition, context)
-      end
+      return false if auth_adapter.nil?
 
-      false
+      auth_adapter.new(field_definition, context).authorize
     end
-
-    # rubocop:disable Metrics/MethodLength
-    def authorize_with_can_can_can(field_definition, context)
-      unless field_definition.authorize.is_a?(Array)
-        raise ArgumentError,
-              "#authorize arguments should be passed as array, e.g. `authorize [:read, Post]`"
-      end
-
-      source =
-        if auth_adapter_source
-          auth_adapter_source.call(context)
-        else
-          Ability.new(context[:current_user])
-        end
-      unless source.respond_to?(:can?)
-        raise ArgumentError,
-              "an object returned by #auth_adapter_source call does not respond to #can?"
-      end
-
-      source.can?(*field_definition.authorize)
-    end
-    # rubocop:enable Metrics/MethodLength
 
     def auth_adapter
       GraphqlAuthorize.config.auth_adapter
-    end
-
-    def auth_adapter_source
-      GraphqlAuthorize.config.auth_adapter_source
     end
   end
 end

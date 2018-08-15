@@ -10,8 +10,6 @@ describe "proc" do
   let(:guest) { User.new(false) }
   let(:query) { build_graphql_query("posts", selections: %i[id title]) }
 
-  before { GraphqlAuthorize.config.auth_adapter = nil }
-
   ProcQueryType = GraphQL::ObjectType.define do
     name "ProcQueryType"
 
