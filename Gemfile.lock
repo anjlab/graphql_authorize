@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     graphql_authorize (0.1.0)
-      graphql (= 1.6)
+      graphql (~> 1.6)
 
 GEM
   remote: https://rubygems.org/
@@ -16,7 +16,7 @@ GEM
     cancancan (2.2.0)
     concurrent-ruby (1.0.5)
     diff-lcs (1.3)
-    graphql (1.6.0)
+    graphql (1.8.9)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
