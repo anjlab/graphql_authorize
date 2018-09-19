@@ -3,7 +3,7 @@
 # GraphqlAuthorize
 
 
-This gem allows you to authorize an access to you graphql-fields (defined by [graphql-ruby](https://github.com/rmosolgo/graphql-ruby)). For now, we support only 1.6 version :(
+This gem allows you to authorize an access to you graphql-fields (defined by [graphql-ruby](https://github.com/rmosolgo/graphql-ruby)).
 
 ## Installation
 
@@ -33,6 +33,17 @@ field :posts, types[PostType] do
   }
 
   resolve ->(_obj, _args, _context) { ... }
+end
+```
+
+It also works for a new class-based syntax:
+
+```ruby
+field :posts, PostType, null: false do
+  authorize lambda { |_obj, _args, context|
+    current_user = context[:current_user]
+    current_user && current_user.admin
+  }
 end
 ```
 

@@ -16,10 +16,3 @@ matrix:
       gemfile: gemfiles/graphql-1.7.gemfile
     - rvm: 2.3.1
       gemfile: gemfiles/graphql-1.6.gemfile
-  allow_failures:
-    - rvm: ruby-head
-      gemfile: gemfiles/graphql-1.8.gemfile
-    - rvm: 2.5.0
-      gemfile: gemfiles/graphql-1.8.gemfile
-    - rvm: 2.4.3
-      gemfile: gemfiles/graphql-1.7.gemfile
