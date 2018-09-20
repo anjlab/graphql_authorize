@@ -2,6 +2,8 @@
 
 ## master
 
+## 0.2.0 (2018-09-20)
+
 - [PR [#6](https://github.com/DmitryTsepelev/ar_lazy_preload/pull/6)] Support GraphQL class syntax ([@DmitryTsepelev][])
 
 ## 0.1.1 (2018-09-17)
