@@ -2,6 +2,10 @@
 
 ## master
 
+## 0.4.0 (TBD)
+
+- [PR [#9](https://github.com/anjlab/graphql_authorize/pull/9)] Implement I18n  ([@krider2010][])
+
 ## 0.3.0 (2018-10-09)
 
 - [PR [#7](https://github.com/DmitryTsepelev/ar_lazy_preload/pull/7)] Remove global exception handler  ([@DmitryTsepelev][])
@@ -16,3 +20,4 @@
 
 [@DmitryTsepelev]: https://github.com/DmitryTsepelev
 [@serggl]: https://github.com/serggl
+[@krider2010]: https://github.com/krider2010

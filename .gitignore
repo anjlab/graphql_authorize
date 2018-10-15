@@ -6,3 +6,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+
+# The repo does not want this checked in
+.ruby-version
