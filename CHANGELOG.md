@@ -2,7 +2,7 @@
 
 ## master
 
-## 0.4.0 (TBD)
+## 0.4.0
 
 - [PR [#9](https://github.com/anjlab/graphql_authorize/pull/9)] Implement I18n  ([@krider2010][])
 

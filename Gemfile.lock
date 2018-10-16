@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    graphql_authorize (0.3.0)
+    graphql_authorize (0.4.0)
       graphql (>= 1.6)
       i18n (~> 1.1)
 
