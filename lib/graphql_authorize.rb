@@ -27,8 +27,11 @@ module GraphqlAuthorize
     end
   end
 
-  # Default, if not specified, is :en
-  I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
+  puts "==="
+  puts Dir[File.expand_path(__dir__ + "/../config/locales/*.yml")].inspect
+  puts "==="
+
+  I18n.load_path += Dir[File.expand_path(__dir__ + "/../config/locales/*.yml")]
 
   GraphQL::Field.include(GraphqlAuthorize::Field)
 
