@@ -7,7 +7,9 @@ module GraphqlAuthorize
       if authorized?(field_definition, parent_object, field_args, context)
         super
       else
-        GraphQL::ExecutionError.new("Access to the field '#{field_definition.name}' is denied!")
+        GraphQL::ExecutionError.new(
+          I18n.t("graphql_authorize.graphql.accessdenied", name: field_definition.name)
+        )
       end
     end
     # rubocop:enable Metrics/ParameterLists

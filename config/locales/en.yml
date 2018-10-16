@@ -1,0 +1,8 @@
+---
+en:
+  graphql_authorize:
+    auth:
+      canrespond: an object returned by \#auth_adapter_source call does not respond to \#can?
+      arrayargs: \#authorize arguments should be passed as array, e.g. `authorize [:read, Post]`
+    graphql:
+      accessdenied: Access to the field '%{name}' is denied!

@@ -27,6 +27,9 @@ module GraphqlAuthorize
     end
   end
 
+  # Default, if not specified, is :en
+  I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
+
   GraphQL::Field.include(GraphqlAuthorize::Field)
 
   GraphQL::Schema::Field.include(GraphqlAuthorize::SchemaField) if supports_class_syntax?

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "graphql_authorize"
+require "i18n"
 
 RSpec.configure do |config|
   config.order = :random

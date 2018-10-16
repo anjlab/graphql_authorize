@@ -5,13 +5,11 @@ module GraphqlAuthorize
     class CanCanCan < Base
       def authorize
         unless field_definition.authorize.is_a?(Array)
-          raise ArgumentError,
-                "#authorize arguments should be passed as array, e.g. `authorize [:read, Post]`"
+          raise ArgumentError, I18n.t("graphql_authorize.auth.arrayargs")
         end
 
         unless source.respond_to?(:can?)
-          raise ArgumentError,
-                "an object returned by #auth_adapter_source call does not respond to #can?"
+          raise ArgumentError, I18n.t("graphql_authorize.auth.canrespond")
         end
 
         source.can?(*field_definition.authorize)
