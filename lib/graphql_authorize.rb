@@ -27,10 +27,6 @@ module GraphqlAuthorize
     end
   end
 
-  puts "==="
-  puts Dir[File.expand_path(__dir__ + "/../config/locales/*.yml")].inspect
-  puts "==="
-
   I18n.load_path += Dir[File.expand_path(__dir__ + "/../config/locales/*.yml")]
 
   GraphQL::Field.include(GraphqlAuthorize::Field)
