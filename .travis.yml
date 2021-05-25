@@ -8,7 +8,7 @@ notifications:
 matrix:
   fast_finish: true
   include:
-    - rvm: ruby-head
+    - rvm: 2.7.0
       gemfile: gemfiles/graphql-1.8.gemfile
     - rvm: 2.5.0
       gemfile: gemfiles/graphql-1.8.gemfile
