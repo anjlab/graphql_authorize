@@ -75,7 +75,9 @@ describe "CanCanCan" do
         @ability ||= CustomAbility.new(self)
       end
 
-      delegate :can?, to: :ability
+      def can?(*args)
+        ability.can?(*args)
+      end
     end
 
     let(:admin) { CustomUser.new(true) }
